@@ -15,7 +15,7 @@ export default function FormButton({ text }: FormButtonProps) {
       disabled:bg-neutral-400  disabled:text-neutral-300 disabled:cursor-not-allowed
       hover:bg-neutral-400 transform active:scale-95 transition"
     >
-      {pending ? "로딩 중" : text}
+      {pending ? "Loading..." : text}
     </button>
   );
 }
