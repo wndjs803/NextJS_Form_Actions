@@ -39,21 +39,21 @@ export default function LogIn() {
           type="email"
           placeholder="Email"
           required
-          errors={[]}
+          errors={state?.error?.fieldErrors.email}
         />
         <FormInput
-          name="nickname"
+          name="username"
           type="text"
-          placeholder="nickname"
+          placeholder="username"
           required
-          errors={[]}
+          errors={state?.error?.fieldErrors.username}
         />
         <FormInput
           name="password"
           type="password"
           placeholder="Password"
           required
-          errors={state?.errors ?? []}
+          errors={state?.error?.fieldErrors.password}
         />
         <FormButton text="Log in" />
         {state?.success === true ? (
