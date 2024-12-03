@@ -6,7 +6,6 @@ interface Route {
 }
 
 const publicOnlyUrls: Route = {
-  "/": true,
   "/login": true,
   "/create-account": true,
 };
@@ -22,7 +21,7 @@ export async function middleware(request: NextRequest) {
     }
   } else {
     if (exists) {
-      return NextResponse.redirect(new URL("/products", request.url));
+      return NextResponse.redirect(new URL("/", request.url));
     }
   }
 }
